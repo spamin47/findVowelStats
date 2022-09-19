@@ -9,11 +9,6 @@ class VowelStats
     private:
         vector<char> vChar; 
         char* aChar;
-        int a;
-        int e;
-        int i;
-        int o;
-        int u;
 
     public:
         VowelStats();

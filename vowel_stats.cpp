@@ -23,11 +23,11 @@ VowelStats::VowelStats(){
 }
 
 void VowelStats::get_vector_stats(){
-    a = 0;
-    e = 0;
-    i = 0;
-    o = 0;
-    u = 0;
+    int a = 0;
+    int e = 0;
+    int i = 0;
+    int o = 0;
+    int u = 0;
 
     time_point<system_clock> startTime = system_clock::now(); //track elapse time of process
     for(int i = 0;i<vChar.size();i++){
@@ -59,11 +59,11 @@ void VowelStats::get_vector_stats(){
 };
 
 void VowelStats::get_array_stats(){
-    a = 0;
-    e = 0;
-    i = 0;
-    o = 0;
-    u = 0;
+    int a = 0;
+    int e = 0;
+    int i = 0;
+    int o = 0;
+    int u = 0;
 
     time_point<system_clock> startTime = system_clock::now(); //track elapse time of process
 
