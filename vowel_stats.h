@@ -13,9 +13,11 @@ class VowelStats
     public:
         VowelStats();
         VowelStats(string value);
+        ~VowelStats();
         void get_vector_stats();
         void get_array_stats();
         void display_stats();
+        
 
     
 
