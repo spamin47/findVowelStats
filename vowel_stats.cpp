@@ -20,9 +20,9 @@ VowelStats::VowelStats(string value)
 VowelStats::VowelStats(){
     string value = "aabbccddeeffxxyyzzabcdefghijklmnopqrstuvwxyz";
     aChar = new char[value.size()];
-    for(int i = 0;i<value.size();i++){ //push all characters into vector and array
-        vChar.push_back(value.at(i));
-        aChar[i] = value.at(i);
+    for(int j = 0;j<value.size();j++){ //push all characters into vector and array
+        vChar.push_back(value.at(j));
+        aChar[j] = value.at(j);
     }
 }
 
@@ -35,8 +35,8 @@ void VowelStats::get_vector_stats(){
     int u = 0;
 
     time_point<system_clock> startTime = system_clock::now(); //track elapse time of process
-    for(int i = 0;i<vChar.size();i++){
-        switch (vChar.at(i)) //if vowel detected vector of characters, increment the count
+    for(int j = 0;j<vChar.size();j++){
+        switch (vChar.at(j)) //if vowel detected vector of characters, increment the count
         {
         case 'a':
             a++;
@@ -45,6 +45,7 @@ void VowelStats::get_vector_stats(){
             e++;
             break;
         case 'i':
+            cout<<"case i encountered"<<endl;
             i++;
             break;
         case 'o':
@@ -59,7 +60,7 @@ void VowelStats::get_vector_stats(){
     time_point<system_clock> endTime = system_clock::now();
     double time_ms = duration_cast<milliseconds>(endTime-startTime).count();
     double timeInSeconds = time_ms/1000.0;//convert milliseconds to seconds
-    cout<<"a:"<<a<<"\ne:"<<e<<"\ni:"<<i<<"\no:"<<"\nu:"<<u<<endl;
+    cout<<"a:"<<a<<"\ne:"<<e<<"\ni:"<<i<<"\no:"<<o<<"\nu:"<<u<<endl;
     cout<<"Elapsed time => milliseconds: "<<time_ms<<" , in seconds: "<<timeInSeconds<<endl;
 };
 
@@ -73,8 +74,8 @@ void VowelStats::get_array_stats(){
 
     time_point<system_clock> startTime = system_clock::now(); //track elapse time of process
 
-    for(int i = 0;i<vChar.size();i++){
-        switch (vChar[i]) //if vowel detected in array of characters, increment the count
+    for(int j = 0;j<vChar.size();j++){
+        switch (vChar[j]) //if vowel detected in array of characters, increment the count
         {
         case 'a':
             a++;
@@ -97,7 +98,7 @@ void VowelStats::get_array_stats(){
     time_point<system_clock> endTime = system_clock::now();
     double time_ms = duration_cast<milliseconds>(endTime-startTime).count();
     double timeInSeconds = time_ms/1000.0; //convert milliseconds to seconds
-    cout<<"a:"<<a<<"\ne:"<<e<<"\ni:"<<i<<"\no:"<<"\nu:"<<u<<endl;
+    cout<<"a:"<<a<<"\ne:"<<e<<"\ni:"<<i<<"\no:"<<o<<"\nu:"<<u<<endl;
     cout<<"Elapsed time => milliseconds: "<<time_ms<<" , in seconds: "<<timeInSeconds<<endl;
 };
 
